@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Softline</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header__logo">
+                <img src="./assets/img/logo.svg" alt="logo image">
+            </div>
+            <nav class="header__hav">
+                <div class="header__nav-item">Облачные решения</div>
+                <div class="header__nav-item">Кибербезопасность</div>
+                <div class="header__nav-item">Импортозамещение</div>
+                <div class="header__nav-item">Цифровая трансформация</div>
+            </nav>
+        </div>
+
+        <div class="banner">
+            <div class="banner__text">
+                Поставщик услуг цифровой трансформации и кибербезопасности
+            </div>
+            <button class="banner__btn" onclick="window.location.href = 'https://softline.ru/';">На сайт</button>
+        </div>
+
+        <div class="stats">
+            <p class="stats__about">
+                <span class="stats__about" style="color: #B01736">Softline</span>
+                – ведущий поставщик IT-решений и сервисов.*
+                Мы предлагаем комплексные IT-решения, облака, программное
+                и аппаратное обеспечение, решения по цифровой трансформации
+                и кибербезопасности, а также широкий спектр IT-услуг.
+            </p>
+        </div>
+
+        <div class="numbers">
+            <div class="numbers-item">
+                <h1 class="numbers-item__title"> > 30 лет</h1>
+                <p class="numbers-item__text">на IT рынке</p>
+            </div>
+
+            <div class="numbers-item">
+                <h1 class="numbers-item__title">4600</h1>
+                <p class="numbers-item__text">сотрудников в России</p>
+            </div>
+
+            <div class="numbers-item">
+                <h1 class="numbers-item__title">25</h1>
+                <p class="numbers-item__text">городов России</p>
+            </div>
+
+            <div class="numbers-item">
+                <h1 class="numbers-item__title">2000 +</h1>
+                <p class="numbers-item__text">разработчиков</p>
+            </div>
+
+            <div class="numbers-item">
+                <h1 class="numbers-item__title">3000 +</h1>
+                <p class="numbers-item__text">сотрудников ежегодно проходят оценку и обучение</p>
+            </div>
+        </div>
+
+        <div class="map">
+            <div class="map-menu">
+                <div class="map-menu__dropdown">
+                    <span style="margin-right: 12px">Офисы Softline</span>
+                    <img src="./assets/img/dropdownArrow.svg" alt="dropdown">
+                </div>
+                <div class="map-menu__tabs">
+                    <div class="map-menu__tabs-item" id="all-tab">Все</div>
+                    <div class="map-menu__tabs-item" id="moscow-tab">Москва</div>
+                    <div class="map-menu__tabs-item" id="center-tab">Центр</div>
+                    <div class="map-menu__tabs-item" id="northwest-tab">Северо-Запад</div>
+                    <div class="map-menu__tabs-item" id="south-tab">Юг</div>
+                    <div class="map-menu__tabs-item" id="volga-tab">Волга</div>
+                    <div class="map-menu__tabs-item" id="ural-tab">Урал</div>
+                    <div class="map-menu__tabs-item" id="siberia-tab">Сибирь</div>
+                    <div class="map-menu__tabs-item" id="east-tab">Дальний восток</div>
+                </div>
+            </div>
+            <div class="map-view">
+                <div class="map-view__cities" id="all">
+                    <img style="position: absolute; top: 123.3px; left: 3px;" src="./assets/img/allCities.svg" alt="map"/>
+                </div>
+                <div class="map-view__cities" id="moscow">
+                    <img style="position: absolute; left: 118px;top: 223px" src="./assets/img/moscow.svg" alt="map"/>
+                </div>
+                <div class="map-view__cities" id="center">
+                    <img style="position: absolute; top: 279.3px; left: 64px;" src="./assets/img/center1.svg" alt="map"/>
+                    <img style="position: absolute; top: 198px; left: 69px;" src="./assets/img/center2.svg" alt="map"/>
+                </div>
+                <div class="map-view__cities" id="northwest">
+                    <img style="position: absolute; top: 123.3px; left: 3px;" src="./assets/img/northwest.svg" alt="map"/>
+                </div>
+                <div class="map-view__cities" id="south">
+                    <img style="position: absolute; top: 320px; left: 18px;" src="./assets/img/south.svg" alt="map"/>
+                </div>
+                <div class="map-view__cities" id="volga">
+                    <img style="position: absolute; top: 260px; left: 160px" src="./assets/img/volga.svg" alt="map"/>
+                </div>
+                <div class="map-view__cities" id="ural">
+                    <img style="position: absolute; top: 290px; left: 285px" src="./assets/img/ural.svg" alt="map"/>
+                </div>
+                <div class="map-view__cities" id="siberia">
+                    <img style="position: absolute; top: 437px; left: 440.5px" src="./assets/img/siberia.svg" alt="map"/>
+                </div>
+                <div class="map-view__cities" id="east">
+                    <img style="position: absolute; top: 475px; left: 928px" src="./assets/img/east.svg" alt="map"/>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+<script src="assets/scripts/mapChanger.js"></script>
+</body>
+</html>
