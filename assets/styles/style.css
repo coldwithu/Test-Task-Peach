@@ -6,6 +6,14 @@
   font-family: "Proxima Nova Condensed Bold";
   src: url(/assets/fonts/proximanovacond_bold.ttf);
 }
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(/assets/fonts/proximanova_regular.ttf);
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url(/assets/fonts/proximanova_bold.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -107,22 +115,32 @@ body {
   color: #444444;
 }
 .container .map-menu {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 70px;
+  padding: 30px 70px;
   color: #444444;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
 }
-.container .map-menu__dropdown {
+.container .map-menu__dropdown-logo {
   cursor: pointer;
   display: flex;
   font-size: 24px;
   line-height: 100%;
 }
+.container .map-menu__dropdown-logo.active img {
+  rotate: 180deg;
+}
 .container .map-menu__tabs {
   display: flex;
   font-size: 18px;
   line-height: 20px;
+  transition: opacity 0.5s ease-in-out;
+}
+.container .map-menu__tabs.disabled {
+  pointer-events: none;
+  opacity: 0.1;
 }
 .container .map-menu__tabs-item {
   margin-right: 30px;
@@ -142,7 +160,7 @@ body {
   position: absolute;
   content: "";
   display: block;
-  top: 49px;
+  top: 50px;
   height: 3px;
   background: #A30C33;
   width: 0;
@@ -154,12 +172,49 @@ body {
 .container .map-menu__tabs-item.active:after {
   width: 100%;
 }
+.container .map-menu__dropdown {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 101;
+  top: 100px;
+  background-color: #FFFFFF;
+  color: #444444;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+  transition: opacity 0.5s ease-in-out;
+}
+.container .map-menu__dropdown.active {
+  opacity: 1;
+}
+.container .map-menu__dropdown__columns {
+  display: flex;
+  padding: 30px 68.5px;
+  justify-content: space-between;
+}
+.container .map-menu__dropdown__column {
+  color: #444444;
+}
+.container .map-menu__dropdown__column-header {
+  font-family: "Proxima Nova", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+.container .map-menu__dropdown__column-p {
+  font-family: "Proxima Nova", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
 .container .map-view {
   background-image: url("/assets/img/map.svg");
   background-repeat: no-repeat;
   width: 100%;
   margin: 90px 30px 100px 30px;
   height: 610px;
+  transition: opacity 0.5s ease-in-out;
 }
 .container .map-view .map-view__cities {
   position: relative;
@@ -169,6 +224,10 @@ body {
 .container .map-view .map-view__cities.active {
   opacity: 1;
   display: block;
+}
+.container .map-view.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */

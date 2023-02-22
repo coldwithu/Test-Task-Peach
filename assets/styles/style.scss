@@ -7,6 +7,15 @@
   font-family: 'Proxima Nova Condensed Bold';
   src: url(/assets/fonts/proximanovacond_bold.ttf);
 }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/assets/fonts/proximanova_regular.ttf);
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url(/assets/fonts/proximanova_bold.otf);
+}
 *{
   margin: 0;
   padding: 0;
@@ -116,25 +125,37 @@ body{
   }
 
   .map-menu{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 30px 70px;
+    padding: 30px 70px;
     color: #444444;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
 
-    &__dropdown{
+    &__dropdown-logo{
       cursor: pointer;
       display: flex;
       font-size: 24px;
       line-height: 100%;
+
+      &.active{
+        img{
+          rotate: 180deg;
+        }
+      }
     }
 
     &__tabs{
       display: flex;
       font-size: 18px;
       line-height: 20px;
+      transition: opacity 0.5s ease-in-out;
 
-
+      &.disabled{
+        pointer-events: none;
+        opacity: 0.1;
+      }
       &-item{
         margin-right: 30px;
         height: 100%;
@@ -153,7 +174,7 @@ body{
           position: absolute;
           content: '';
           display: block;
-          top: 49px;
+          top: 50px;
           height: 3px;
           background: #A30C33;
           width: 0;
@@ -166,12 +187,47 @@ body{
             width: 100%;
           }
         }
+      }
+    }
+    &__dropdown{
+      opacity: 0;
+      width: 100%;
+      position: absolute;
+      z-index: 101;
+      top:100px;
+      background-color: #FFFFFF;
+      color: #444444;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+      transition: opacity 0.5s ease-in-out;
+
+      &.active{
+        opacity: 1;
+      }
+      &__columns{
+        display: flex;
+        padding: 30px 68.5px;
+        justify-content: space-between;
 
       }
-
+      &__column{
+        color: #444444;
+        &-header{
+          font-family: "Proxima Nova", sans-serif;
+          font-style: normal;
+          font-size: 18px;
+          margin: 0 0 10px 0;
+          font-weight: 600;
+        }
+        &-p{
+          font-family: "Proxima Nova", sans-serif;
+          font-style: normal;
+          font-size: 18px;
+          margin: 0 0 10px 0;
+          font-weight: 400;
+        }
+      }
     }
   }
-
   .map-view{
 
     background-image: url("/assets/img/map.svg");
@@ -180,7 +236,7 @@ body{
     margin: 90px 30px 100px 30px;
     height: 610px;
 
-
+    transition: opacity 0.5s ease-in-out;
 
     .map-view__cities{
       position: relative;
@@ -191,6 +247,11 @@ body{
         opacity: 1;
         display: block;
       }
+    }
+
+    &.disabled{
+      pointer-events: none;
+      opacity: 0.5;
     }
   }
 

@@ -63,9 +63,9 @@
             </div>
         </div>
 
-        <div class="map">
+        <div class="map" style="position: relative">
             <div class="map-menu">
-                <div class="map-menu__dropdown">
+                <div class="map-menu__dropdown-logo">
                     <span style="margin-right: 12px">Офисы Softline</span>
                     <img src="./assets/img/dropdownArrow.svg" alt="dropdown">
                 </div>
@@ -80,7 +80,66 @@
                     <div class="map-menu__tabs-item" id="siberia-tab">Сибирь</div>
                     <div class="map-menu__tabs-item" id="east-tab">Дальний восток</div>
                 </div>
+
             </div>
+
+            <div class="map-menu__dropdown">
+                <div class="map-menu__dropdown__columns">
+                    <div class="map-menu__dropdown__column">
+                        <h1 class="map-menu__dropdown__column-header">Москва</h1>
+                    </div>
+                    <div class="map-menu__dropdown__column">
+                        <h1 class="map-menu__dropdown__column-header">Центр</h1>
+                        <p class="map-menu__dropdown__column-p">Воронеж</p>
+                        <p class="map-menu__dropdown__column-p">Ярославль</p>
+                        <p class="map-menu__dropdown__column-p">Белгород</p>
+                    </div>
+                    <div class="map-menu__dropdown__column">
+                        <h1 class="map-menu__dropdown__column-header">Северо-Запад</h1>
+                        <p class="map-menu__dropdown__column-p">Санкт-Петербург</p>
+                        <p class="map-menu__dropdown__column-p">Калининград</p>
+                    </div>
+                    <div class="map-menu__dropdown__column">
+                        <h1 class="map-menu__dropdown__column-header">Юг</h1>
+                        <p class="map-menu__dropdown__column-p">Ростов-на-Дону</p>
+                        <p class="map-menu__dropdown__column-p">Краснодар</p>
+                        <p class="map-menu__dropdown__column-p">Волгоград</p>
+                    </div>
+                    <div class="map-menu__dropdown__column">
+                        <h1 class="map-menu__dropdown__column-header">Волга</h1>
+                        <p class="map-menu__dropdown__column-p">Казань</p>
+                        <p class="map-menu__dropdown__column-p">Самара</p>
+                        <p class="map-menu__dropdown__column-p">Уфа</p>
+                        <p class="map-menu__dropdown__column-p">Оренбург</p>
+                        <p class="map-menu__dropdown__column-p">Нижний новгород</p>
+                    </div>
+                    <div class="map-menu__dropdown__column">
+                        <h1 class="map-menu__dropdown__column-header">Урал</h1>
+                        <p class="map-menu__dropdown__column-p">Екатеринбург</p>
+                        <p class="map-menu__dropdown__column-p">Челябинск</p>
+                        <p class="map-menu__dropdown__column-p">Пермь</p>
+                        <p class="map-menu__dropdown__column-p">Сургут</p>
+                        <p class="map-menu__dropdown__column-p">Тюмень</p>
+                        <p class="map-menu__dropdown__column-p">Ижевск</p>
+                    </div>
+                    <div class="map-menu__dropdown__column">
+                        <h1 class="map-menu__dropdown__column-header">Сибирь</h1>
+                        <p class="map-menu__dropdown__column-p">Новосибирск</p>
+                        <p class="map-menu__dropdown__column-p">Омск</p>
+                        <p class="map-menu__dropdown__column-p">Томск</p>
+                        <p class="map-menu__dropdown__column-p">Красноярск</p>
+                        <p class="map-menu__dropdown__column-p">Иркутск</p>
+                    </div>
+                    <div class="map-menu__dropdown__column">
+                        <h1 class="map-menu__dropdown__column-header">Дальний Восток</h1>
+                        <p class="map-menu__dropdown__column-p">Хабаровск</p>
+                        <p class="map-menu__dropdown__column-p">Владивосток</p>
+                    </div>
+                </div>
+
+            </div>
+
+
             <div class="map-view">
                 <div class="map-view__cities" id="all">
                     <img style="position: absolute; top: 123.3px; left: 3px;" src="./assets/img/allCities.svg" alt="map"/>
@@ -110,12 +169,14 @@
                 <div class="map-view__cities" id="east">
                     <img style="position: absolute; top: 475px; left: 928px" src="./assets/img/east.svg" alt="map"/>
                 </div>
-
-
             </div>
         </div>
 
+        <div class="mission">
+
+        </div>
     </div>
 <script src="assets/scripts/mapChanger.js"></script>
+<script src="assets/scripts/mapMenuDropdown.js"></script>
 </body>
 </html>
